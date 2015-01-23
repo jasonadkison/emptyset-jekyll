@@ -44,5 +44,11 @@ Also make sure you have this entry in your `/etc/hosts` file on the host machine
 192.168.33.10	emptyset.local
 ```
 
+####Watch for changes
+In order to listen for code changes on Vagrant, you must force polling.
+```rb
+$ jekyll serve --force_polling
+```
+
 ###Done
 If done correctly, `http://localhost:4000` should now render the static Jekyll site when opened in your browser.
