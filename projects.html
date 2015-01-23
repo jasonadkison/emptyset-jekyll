@@ -1,0 +1,17 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<p>This is some placeholder text.</p>
+
+<ul>
+	{% for project in site.projects %}
+		<li>
+			<a class="project-link" href="{{ project.url | prepend: site.baseurl }}">
+				{{ project.title }}
+			</a>
+		</li>
+	{% endfor %}
+</ul>

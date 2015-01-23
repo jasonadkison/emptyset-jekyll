@@ -15,7 +15,9 @@ github_username: emptysetco
 # Build settings
 markdown: kramdown
 
-#collections:
+collections:
+  projects:
+    output: true
 
 defaults:
   -
