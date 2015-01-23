@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// CSS RESET //
+@import 'partials/reset';
+
+// IMPORT BOURBON AND NEAT //
+@import 'bourbon';
+@import 'neat';
+
+// BOURBON BITTERS VARIABLES //
+$highlight: #26A65B;
+$highlight-2: lightgrey;
+$parallax-intro-url: url('<%= asset_path "background.jpg" %>') 0 0 no-repeat;
+
+// VENDOR STYLES //
+@import 'vendor/devicons/css/devicons';
+
+//CUSTOM STYLES
+@import 'partials/globals';
+@import 'partials/header';
+@import 'partials/intro';
+@import 'partials/footer';

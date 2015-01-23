@@ -1,0 +1,43 @@
+
+section.intro {
+	padding: 0;
+	color: white;
+	text-transform: uppercase;
+
+	.image-bg {
+		background: $parallax-intro-url;
+		background-size: cover;
+	}
+
+	.container {
+		//@include media($small-screen-up) {
+			position: relative;
+			top: 35%;
+			transform: translateY(-50%);
+		//}	
+
+		//@include media($small-screen-down) {
+			//padding-top: 8em;
+		//}
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 6em;
+	}
+
+	h3 {
+		text-align: center;
+		font-size: 1em;
+	}
+
+	.landing-icons {
+		display:inline-block;
+		margin-top: 2%;
+
+		.devicons:before {
+			font-size: 2rem;
+			opacity: 0.6;
+		}
+	}
+}
