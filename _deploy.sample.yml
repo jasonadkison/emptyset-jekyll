@@ -6,9 +6,15 @@ deploy:
     path: "" # path to write site files
     assets:
       baseurl: "/assets" # e.g., /blog/assets
+      css_compressor: 'sass'
+      js_compressor: 'uglifier'
+      debug: false
   staging:
     server: ""
     username: ""
     path: "" # path to write site files
     assets:
       baseurl: "/assets" # e.g., /blog/assets
+      css_compressor: ~
+      js_compressor: ~
+      debug: true
