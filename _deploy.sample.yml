@@ -3,13 +3,12 @@ deploy:
   production:
     server: ""
     username: ""
-    path: ""
-    baseurl: ""
+    path: "" # path to write site files
     assets:
-      baseurl: ""
+      baseurl: "/assets" # e.g., /blog/assets
   staging:
     server: ""
     username: ""
-    path: ""
+    path: "" # path to write site files
     assets:
-      baseurl: ""
+      baseurl: "/assets" # e.g., /blog/assets
