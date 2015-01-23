@@ -52,3 +52,13 @@ $ jekyll serve --force_polling
 
 ###Done
 If done correctly, `http://localhost:4000` should now render the static Jekyll site when opened in your browser.
+
+###Deploying
+Deploying the site is done through rake task. The procedure will build the site and transfer the `_site/` directory over to your server via rsync. The required settings are stored in `_deploy.yml`.
+
+```rb
+# deploy
+$ rake deploy
+
+# follow the prompts...
+```
