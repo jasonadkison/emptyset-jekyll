@@ -1,0 +1,133 @@
+//AUTHOR SECTION
+//--------------------------------------------------
+
+//general layout styles for author area
+.author-info {
+	margin: 30px 0;
+	padding: 15px 0;
+	border-top: 1px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3;
+	overflow: hidden;
+}
+
+//author image styles
+.author-image {
+	display: block;
+	float: left;
+	width: 12%;
+	@include border-radius(50%, 50%);
+}
+
+//author details wrapper styles
+.author-details {
+	display: block;
+	float: right;
+	width: 82%;
+}
+
+//author name styles
+.author-name {
+	margin: 15px 0;
+}
+
+//author bio styles
+.author-bio {
+	margin: 15px 0 5px 0;
+	font: 400 14px 'Open Sans', Serif;
+	line-height: 32px;
+}
+
+//author social contact wrapper
+.author-contact {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	font-size: 32px;
+	@include transform(translateZ(0));
+	@include transition(all 0.25s ease-out);
+
+	li {
+		float: left;
+		margin: 0 10px 10px 0;
+		padding: 0;
+
+		a {
+			display: inline-block;
+			width: 40px;
+			padding: 0;
+			@include border-radius(41px, 41px);
+			text-align: center;
+			color: #fff;
+			@include transition(all 0.25s ease-out);
+		}
+	}
+}
+
+//author contact twitter specific styles
+.author-contact .twitter {
+	color: $twitterblue;
+	@include transform(scale(1));
+	@include transition(all 0.2s ease-in-out);
+
+	&:hover {
+		@include transform(scale(1.1));
+		@include transition(all 0.2s ease-in-out);
+	}
+
+	&:focus {
+		@include transform(scale(1));
+		@include transition(all 0.2s ease-in-out);
+	}
+}
+
+//author contact github specific styles
+.author-contact .github {
+	color: $githubblack;
+	@include transform(scale(1));
+	@include transition(all 0.2s ease-in-out);
+
+	&:hover {
+		@include transform(scale(1.1));
+		@include transition(all 0.2s ease-in-out);
+	}
+
+	&:focus {
+		@include transform(scale(1));
+		@include transition(all 0.2s ease-in-out);
+	}
+}
+
+//author contact linkedin specific styles
+.author-contact .linkedin {
+	color: $linkedinblue;
+	@include transform(scale(1));
+	@include transition(all 0.2s ease-in-out);
+
+	&:hover {
+		transform: scale(1.1);
+		@include transition(all 0.2s ease-in-out);
+	}
+
+	&:focus {
+		@include transform(scale(1));
+		@include transition(all 0.2s ease-in-out);
+	}
+}
+
+
+//RESPONSIVE STYLES
+//author info styles for small screens
+.author-info {
+
+	@media screen and (max-width: 320px) {
+		.author-image {
+			float: none;
+			width: 25%;
+		}
+		.author-details {
+			float: none;
+			width: 100%;
+		}
+	}
+}

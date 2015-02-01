@@ -1,14 +1,61 @@
 ---
-layout: default
+layout: blog
 ---
-<div class="post project">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+{% assign author = site.authors[page.author] %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<div id="cover" class="project-hero">
+	<div class="project-hero-background" style="background-image:url('{{ page.banner_image }}');"></div>
+	<header class="project-hero-header wrapper">
+		<h2 class="project-category">
+			{% for category in page.categories %}
+			{{ category }}
+			{% endfor %}
+		</h2>
+		<h1 class="project-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+	</header>
+	<i class="project-see-more fa fa-chevron-down"></i>
 </div>
+
+<section class="posts wrapper">
+	<article class="post">
+
+		<header>
+			<h2>
+				{% for category in page.categories %}
+				{{ category }}
+				{% endfor %}
+			</h2>
+			<h1 id="posttitle"><a href="#">{{ page.title }}</a></h1>
+            <span>
+                Posted by {{ author.display_name }}
+                on <time datetime="{{ page.date| date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time>.
+            </span>
+		</header>
+
+		<section class="postbody">
+			{{ content }}
+		</section>
+
+		<br/>
+
+		<div class="author-info">
+			<img src="{{ author.image }}" class="author-image" alt="user">
+			<div class="author-details">
+				<h4 class="author-name">{{ author.name }}</h4>
+				<p class="author-bio">{{ author.bio }}</p>
+				<ul class="author-contact">
+					{% if author.twitter_url %}
+					<li><a href="{{ author.twitter_url }}" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					{% endif %}
+					{% if author.github_url %}
+					<li><a href="{{ author.github_url }}" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+					{% endif %}
+					{% if author.linkedin_url %}
+					<li><a href="{{ author.linkedin_url }}" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</article>
+</section>

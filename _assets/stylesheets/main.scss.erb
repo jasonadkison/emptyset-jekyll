@@ -1,22 +1,32 @@
 @charset "utf-8";
 
 // CSS RESET //
-@import 'partials/reset';
+@import 'utils/reset';
 
 // IMPORT BOURBON AND NEAT //
 @import 'bourbon';
 @import 'neat';
 
-// BOURBON BITTERS VARIABLES //
-$highlight: #26A65B;
-$highlight-2: lightgrey;
-$parallax-intro-url: url('<%= asset_path "background.jpg" %>') 0 0 no-repeat;
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/fonts';
 
 // VENDOR STYLES //
 @import 'vendor/devicons/css/devicons';
+@import 'vendor/prettyprint';
 
 //CUSTOM STYLES
-@import 'partials/globals';
-@import 'partials/header';
-@import 'partials/intro';
-@import 'partials/footer';
+@import 'layout/globals';
+@import 'layout/layout';
+@import 'components/navigation';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/intro';
+@import 'components/author';
+@import 'components/buttons';
+@import 'components/intro';
+@import 'pages/projects';
+@import 'pages/posts';
+@import 'layout/shame';
+

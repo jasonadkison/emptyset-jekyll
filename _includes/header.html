@@ -1,10 +1,12 @@
-<header>
-	<h1>Header</h1>
-	<nav>
-		{% for page in site.pages %}
-			{% if page.title %}
-				<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-			{% endif %}
-		{% endfor %}
-	</nav>
+<header class="site-logo">
+	<a href="{{ site.url }}" class="site-logo-link">{ Emptyset }</a>
 </header>
+
+<nav class="main-nav {% if page.project == true %} project {% endif %}">
+	<a href="#" class="main-nav-icon-link" onclick="return false;"><i class="main-nav-icon fa fa-navicon fa-lg"></i></a>
+	<ul class="main-nav-pages">
+		{% for page in site.pages %}
+		{% if page.title %}<li class="main-nav-page"><a href="{{ page.url | prepend: site.baseurl }}" class="main-nav-page-link">{{ page.title }}</a></li>{% endif %}
+		{% endfor %}
+	</ul>
+</nav>

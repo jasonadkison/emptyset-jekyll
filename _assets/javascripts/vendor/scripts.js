@@ -11,55 +11,45 @@
 				horizontalScrolling: false
 			});
 		}
-
-		$("#navigation").headroom();
-
 	});
 
 
 	//fittext init
 	$("[data-fittext]").fitText(1, { minFontSize: '50px', maxFontSize: '200px' });
 
+	//fitvids init
+	jQuery(".postbody").fitVids();
+	jQuery(".excerpt").fitVids();
+
 })(jQuery);
 
 
-//headroom init for navbar
-(function($) {
 
-	if(!$) {
-		return;
+jQuery(document).ready(function(){
+
+	//ANALYTICS
+	if(config.analytics_id != '' || config.analytics_id != null || config.analytics_id != undefined){
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', config.analytics_id, config.analytics_domain);
+		ga('send', 'pageview');
 	}
 
-	////////////
-	// Plugin //
-	////////////
 
-	$.fn.headroom = function(option) {
-		return this.each(function() {
-			var $this   = $(this),
-				data      = $this.data('headroom'),
-				options   = typeof option === 'object' && option;
-
-			options = $.extend(true, {}, Headroom.options, options);
-
-			if (!data) {
-				data = new Headroom(this, options);
-				data.init();
-				$this.data('headroom', data);
-			}
-			if (typeof option === 'string') {
-				data[option]();
-			}
-		});
-	};
-
-	//////////////
-	// Data API //
-	//////////////
-
-	$('[data-headroom]').each(function() {
-		var $this = $(this);
-		$this.headroom($this.data());
+	//FEATURE SCROLL
+	$(".project-see-more").click(function(){
+		$("html, body").animate({scrollTop: $('.project-hero').height()}, 1000);
 	});
 
-}(window.Zepto || window.jQuery));
+	//MENU TOGGLE
+	$("#toggle").on("click", function(e) {
+		$(this).toggleClass('on');
+		e.preventDefault();
+	});
+
+
+});
+
+

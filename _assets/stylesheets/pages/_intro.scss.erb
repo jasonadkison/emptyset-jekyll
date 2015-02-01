@@ -1,6 +1,4 @@
-
 section.intro {
-	padding: 0;
 	color: white;
 	text-transform: uppercase;
 
@@ -10,15 +8,15 @@ section.intro {
 	}
 
 	.container {
-		//@include media($small-screen-up) {
+		@include media($small-screen-up) {
 			position: relative;
 			top: 35%;
 			transform: translateY(-50%);
-		//}	
+		}
 
-		//@include media($small-screen-down) {
-			//padding-top: 8em;
-		//}
+		@include media($small-screen-down) {
+			padding-top: 8em;
+		}
 	}
 
 	h1 {

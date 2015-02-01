@@ -3,14 +3,50 @@ host: 0.0.0.0
 
 # Site settings
 version: 0.1.0
-title: Empty Set Creative
-email: email@emptyset.co
-description: >
-  Idea builders, not just idea guys.
+title: Emptyset Creative
+email: projects@emptyset.co
+description: Idea builders, not just idea guys.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "/" # the base hostname & protocol for your site
 twitter_username: emptysetco
 github_username: emptysetco
+
+#basic site variables
+paginate: 					5
+paginate_path: "posts/page:num"
+
+# Author Settings
+authors:
+  Bryan:
+    name: Bryan Lokey
+    display_name: Bryan
+    url: BryanLokey.com
+    bio: When one loves affirmation and heaven, one is able to absorb volume. As i have avoided you, so you must synthesise one another.
+    email: bryan@emptyset.co
+    image: //bryanlokey.com/images/about.png
+    twitter_url: 					"//twitter.com/bryanlokey"
+    github_url:  					"//github.com/brylok"
+    linkedin_url:  				"//linkedin.com/in/bryanlokey"
+  Jason:
+    name: Jason Adkison
+    display_name: Jason
+    url:  Emptyset.co
+    bio:  When one loves affirmation and heaven, one is able to absorb volume. As i have avoided you, so you must synthesise one another.
+    email: jason@emptyset.co
+    image: //www.mattr.co/uploads/team_media/jason-adkison/jason-2-530e40306e0a9.png
+    github_url:  					"//github.com/jasonadkison"
+    linkedin_url:  				"//linkedin.com/pub/jason-adkison/8/b6/688"
+  Emptyset:
+    name: Emptyset Creative
+    display_name: Emptyset
+    url:  Emptyset.co
+    bio:  Emptyset Creative is a group of developers working together to build apps and plugins using the latest in web technology.
+    email: projects@emptyset.co
+    image: //misanthropology101.files.wordpress.com/2015/01/athiest-empty-set.png
+    twitter_url: 					"//twitter.com/emptysetco"
+    github_url:  					"//github.com/emptysetco"
+
+
 
 # Build settings
 markdown: kramdown
@@ -22,7 +58,7 @@ collections:
 defaults:
   -
     scope:
-      path: ""
+      path: "blog"
       type: "posts"
     values:
       layout: "post"
