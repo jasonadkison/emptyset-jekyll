@@ -1,10 +1,106 @@
-//FOOTER
-//--------------------------------------------------
-//app wide footer styles
-.site-footer {
-	padding:25px 0;
-	text-align:center;
-	font:400 13px 'Open Sans', Serif;
-	line-height:34px;
-	color:#a6a6a6;
+.footer-2 {
+
+	///////////////////////////////////////////////////////////////////////////////////
+	$base-spacing: 15px !default;
+	$base-accent-color: #477DCA !default;
+	$medium-screen: em(640) !default;
+	$large-screen: em(860) !default;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		line-height: 1.5em;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	//////////////////////////////////////////////////////////////////////////////////
+
+	$footer-background: $highlight;
+	$footer-color: white;
+	$footer-link-color: transparentize($footer-color, 0.6);
+
+	background: $footer-background;
+	padding: $base-spacing;
+	width: 100%;
+	display: inline-block;
+
+	.footer-logo {
+		margin-right: 1em;
+		margin-bottom: 1em;
+
+		@include media($large-screen) {
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+
+	.footer-logo h4 {
+		margin: 0;
+		font-size: 24px;
+		color: $footer-link-color;
+	}
+
+	ul {
+		margin-bottom: 1em;
+
+		@include media($large-screen) {
+			float: left;
+			line-height: 1.8em;
+			margin-left: 1em;
+			margin-bottom: 0;
+		}
+	}
+
+	ul li {
+		font-weight: 800;
+		padding-right: 1em;
+
+		@include media($large-screen) {
+			display: inline;
+			text-align: left;
+		}
+	}
+
+	ul li a {
+		color: $footer-link-color;
+		border: none;
+
+		&:focus,
+		&:hover {
+			color: transparentize($footer-color, 0);
+		}
+	}
+
+	.footer-secondary-links {
+		@include media($large-screen) {
+			float: right;
+		}
+
+		li {
+			font-size: 0.8em;
+			font-weight: 400;
+		}
+
+		ul.footer-social {
+			margin: 10px;
+
+			li {
+				font-size: 1em;
+				float: left;
+				line-height: 0;
+				padding-right: 0.7em;
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
 }

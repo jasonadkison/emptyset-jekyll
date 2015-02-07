@@ -6,6 +6,9 @@ date:   2014-07-19 04:07:49
 categories: Web App
 permalink: /g8registry/
 banner_image: "/media/desert.jpg"
+github_url: https://github.com/jasonadkison/g8-registry
+project_url: http://g8registery.emptyset.co
+project_thumbnail: http://bryanlokey.com/images/featured.jpg
 project: true
 ---
 

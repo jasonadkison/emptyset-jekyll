@@ -1,0 +1,20 @@
+<div id="cover" class="project-hero">
+	<div class="project-hero-background" style="background-image:url('{{ page.banner_image }}');"></div>
+
+
+	<header class="project-hero-header wrapper">
+
+		<h2 class="project-category">
+			{% for category in page.categories %}
+			{{ category }}
+			{% endfor %}
+		</h2>
+
+		<h1 class="project-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+
+		<div class="bottom-button">
+			<a href="{{ page.github_url }}" class="button large">View on Github</a>
+			<a href="#" class="button large read-more">Read More</a>
+		</div>
+	</header>
+</div>

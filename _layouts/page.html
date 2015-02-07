@@ -1,18 +1,6 @@
 ---
-layout: blog
+layout: default
 ---
-
-<div id="cover" class="cover {% if page.featured == true %} featured {% endif %}">
-	<div class="background"></div>
-	<header class="wrapper">
-		<h2>
-			{% for category in post.categories %}
-			{{ category }}
-			{% endfor %}
-		</h2>
-		<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-	</header>
-</div>
 
 <section class="posts wrapper">
 	<article class="post {% if page.featured == true %} featured {% endif %}">

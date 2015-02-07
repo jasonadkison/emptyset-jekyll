@@ -3,7 +3,8 @@
 //site logo
 .site-logo {
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: lowercase;
+	letter-spacing: 1px;
 }
 
 //site logo link
@@ -14,12 +15,11 @@
 	z-index:200;
 	display:block;
 	padding:9px 12px 6px;
-	background:#29292a;
-	color:#fff;
-	@include transition(background 0.6s ease-out);
+	color: lightgrey;
+	@include transition(color 250ms);
 
 	&:hover{
-		background:#3287c1;
+		color: grey;
 	}
 
 	@media screen and (max-width: 906px) {
@@ -31,3 +31,5 @@
 		display:inline-block;
 	}
 }
+
+

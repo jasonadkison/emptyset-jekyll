@@ -45,13 +45,14 @@ body, html{
 }
 
 a{
-	font-weight:600;
-	color:#026ed2;
-	text-decoration:none;
-	border-bottom:3px solid transparent;
+	font-weight: 600;
+	color: $highlight;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
 	@include transition_two(border 0.2s, color 0.2s ease-out);
+
 	&:hover{
-		color:#0079ec;
+		color: $highlight;
 	}
 }
 
@@ -132,12 +133,12 @@ blockquote, q, cite{
 
 ::-moz-selection {
 	color: #fff;
-	background: #2d75a2;
+	background: $highlight;
 	text-shadow: none;
 }
 
 ::selection {
 	color: #fff;
-	background: #2d75a2;
+	background: $highlight;
 	text-shadow: none;
 }

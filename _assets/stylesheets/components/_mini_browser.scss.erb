@@ -1,0 +1,97 @@
+$barBgColor: #E3E3E3;
+$barHeight: 24px;
+$barColor: #ffffff;
+$borderRadius: 3px;
+$browserBgColor: #fff;
+
+.mini-browser {
+	position: relative;
+	width: 60%;
+	min-height: 220px;
+	margin: 30px auto;
+	padding-top: $barHeight - 1;
+	background: linear-gradient(180deg, $barBgColor, $barBgColor $barHeight, $browserBgColor $barHeight, $browserBgColor);
+	border-radius: $borderRadius;
+	box-shadow: 0 0 1px $barColor;
+	box-sizing: border-box;
+	// further content styles
+	display: inline-block;
+	vertical-align: top;
+	font: 100 30px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	text-align: center;
+	color: #aaa;
+
+	&[data-url]:after {
+		position: absolute;
+		left: 45px;
+		right: 15px;
+		top: 6px;
+		content: attr(data-url);
+		padding: 2px;
+		background: $barColor;
+		font-size: 7px;
+		text-align: left;
+		color: #999;
+		border-radius: 1px;
+		font-weight: 300;
+		line-height: 1;
+	}
+
+	img {
+		display: block;
+		margin: -1px 0 0 0;
+		border-radius: 0 0 $borderRadius $borderRadius;
+		-webkit-filter: grayscale(0.5);
+		-moz-filter: grayscale(0.5);
+		filter: grayscale(0.5);
+		transition: all 250ms;
+	}
+
+	&:hover img {
+		-webkit-filter: grayscale(0.15);
+		-moz-filter: grayscale(0.15);
+		filter: grayscale(0.15);
+		transition: all 250ms;
+	}
+
+	.browser-button {
+		width: 6px;
+		height: 6px;
+		border-radius: 50px;
+		top: 9px;
+		position: absolute;
+		z-index: 10000;
+		transition: background-color 250ms;
+
+		&:hover {
+			transition: background-color 250ms;
+		}
+	}
+
+	.browser-button.close {
+		background-color: #FF7D7D;
+		left: 9px;
+	}
+
+	.browser-button.close:hover {
+		background-color: #FC3838;
+	}
+
+	.browser-button.minimize {
+		background-color: #FFFD8F;
+		left: 20px;
+	}
+
+	.browser-button.minimize:hover {
+		background-color: #FFFB00;
+	}
+
+	.browser-button.expand {
+		background-color: #85FF8D;
+		left: 32px;
+	}
+
+	.browser-button.expand:hover {
+		background-color: #76FC38;
+	}
+}

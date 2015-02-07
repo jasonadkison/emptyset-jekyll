@@ -6,6 +6,7 @@ date:   2014-06-19 04:07:49
 categories: JQuery Plugin
 permalink: /maskmyimage/
 banner_image: "/media/station.jpg"
+github_url: http://bryanlokey.com
 project: true
 ---
 
