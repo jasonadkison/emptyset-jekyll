@@ -1,12 +1,10 @@
 ---
 layout: blog
 title: Posts
-permalink: /posts/
 ---
 
 <section class="posts postindex wrapper">
-
-	{% for post in site.posts %}
+	{% for post in paginator.posts %}
 	<article class="post">
 		<header>
 			<h2>

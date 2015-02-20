@@ -1,0 +1,13 @@
+{% capture current_page %}{{ page.url | replace: 'index.html', ''}}{% endcapture %}
+
+<ul class="main-nav-pages">
+	<li class="main-nav-page{% if current_page == '/about/' %} active{% endif %}">
+		<a href="{{ '/about/' | prepend: site.baseurl }}" class="main-nav-page-link">About</a>
+	</li>
+	<li class="main-nav-page{% if current_page == '/posts/' %} active{% endif %}">
+		<a href="{{ '/posts/' | prepend: site.baseurl }}" class="main-nav-page-link">Posts</a>
+	</li>
+	<li class="main-nav-page{% if current_page == '/projects/' %} active{% endif %}">
+		<a href="{{ '/projects/' | prepend: site.baseurl }}" class="main-nav-page-link">Projects</a>
+	</li>
+</ul>
