@@ -24,8 +24,8 @@
       var head = document.head || document.getElementsByTagName('head')[0];
       var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
       var div = document.createElement("div");
-      div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
-      head.appendChild(div.childNodes[1]);
+      div.innerHTML = '<style type="text/css" id="fit-vids-style">' + css + '</style>';
+      head.appendChild(div.childNodes[0]);
     }
 
     if ( options ) {

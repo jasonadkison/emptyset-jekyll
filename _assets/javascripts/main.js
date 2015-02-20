@@ -1,30 +1,19 @@
+"use strict";
+
 //general inits
-(function ($) {
-
-	"use strict";
-
-
-	$(document).ready(function () {
-
-		if ($(this).width() > 768) {
-			$(window).stellar({
-				horizontalScrolling: false
-			});
-		}
-	});
-
+jQuery(document).ready(function($) {
+	if ($(this).width() > 768) {
+		$(window).stellar({
+			horizontalScrolling: false
+		});
+	}
 
 	//fittext init
 	$("[data-fittext]").fitText(1, {minFontSize: '50px', maxFontSize: '200px'});
 
 	//fitvids init
-	jQuery(".postbody").fitVids();
-	jQuery(".excerpt").fitVids();
-
-})(jQuery);
-
-
-jQuery(document).ready(function () {
+	$(".postbody").fitVids();
+	$(".excerpt").fitVids();
 
 	//ANALYTICS
 	if (config.analytics_id != '' || config.analytics_id != null || config.analytics_id != undefined) {
@@ -54,8 +43,3 @@ jQuery(document).ready(function () {
 		$(this).closest("body").toggleClass("active");
 	});
 });
-
-
-
-
-
