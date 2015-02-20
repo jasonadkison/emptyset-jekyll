@@ -2,11 +2,15 @@
 layout: blog
 title: Projects
 permalink: /projects/
+paginate:
+  collection: projects
+  per_page: 5
+  limit: false
 ---
 
 <section class="posts postindex wrapper">
 
-	{% for project in site.projects %}
+	{% for project in paginator.projects %}
 	<article class="post {% if project.featured == true %} featured {% endif %}">
 		<header>
 			<h2>
