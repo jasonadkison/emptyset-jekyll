@@ -3,7 +3,7 @@ layout: project
 title:  "G8 Registry"
 author: Emptyset
 date:   2014-07-19 04:07:49
-categories: Web App
+categories: [Web App]
 permalink: /g8registry/
 banner_image: "/media/desert.jpg"
 github_url: https://github.com/jasonadkison/g8-registry

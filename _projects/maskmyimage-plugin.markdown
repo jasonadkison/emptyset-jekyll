@@ -3,7 +3,7 @@ layout: project
 title:  "MaskMyImage.js"
 author: Emptyset
 date:   2014-06-19 04:07:49
-categories: JQuery Plugin
+categories: [JQuery Plugin]
 permalink: /maskmyimage/
 banner_image: "/media/station.jpg"
 github_url: http://bryanlokey.com

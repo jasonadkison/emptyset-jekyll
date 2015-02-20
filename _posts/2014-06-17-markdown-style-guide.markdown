@@ -3,7 +3,7 @@ layout: post
 title:  "Markdown Style Guide"
 author: Bryan
 date:   2014-06-16 04:07:49
-categories: Frontend Development
+categories: [Frontend Development]
 ---
 
 This is a simple markdown styleguide. I shows basic elements and how they are styled in this layout

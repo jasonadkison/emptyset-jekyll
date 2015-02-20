@@ -3,7 +3,7 @@ layout: project
 title:  "Easy QA for Wordpress"
 author: Emptyset
 date:   2014-07-19 04:10:49
-categories: Wordpress Plugin
+categories: [Wordpress Plugin]
 permalink: /easy-qa-wordpress/
 banner_image: "/media/desk.jpg"
 github_url: https://github.com/jasonadkison/easy-qa
